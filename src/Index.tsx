@@ -9,7 +9,7 @@ function Index() {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>My SSR test</title>
-        {styles}
+        <style>{styles}</style>
       </head>
       <body>
         <App />
