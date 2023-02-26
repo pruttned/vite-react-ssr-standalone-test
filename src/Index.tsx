@@ -1,21 +1,19 @@
-import styles from "./index.css?inline";
-import App from "./App";
+import globalStyles from "./index.css?inline";
 
-function Index() {
-  return (
+function Index(body: string, styles: string) {
+  return `
     <html lang="en">
       <head>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>My SSR test</title>
-        <style>{styles}</style>
+        <style>${globalStyles}</style>
+        <style>${styles}</style>
       </head>
-      <body>
-        <App />
-      </body>
+      <body>${body}</body>
     </html>
-  );
+  `;
 }
 
 export default Index;
