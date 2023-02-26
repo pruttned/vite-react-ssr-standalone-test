@@ -9,7 +9,7 @@ function Index(body: string, styles: string) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>My SSR test</title>
         <style>${globalStyles}</style>
-        <style>${styles}</style>
+        ${styles}
       </head>
       <body>${body}</body>
     </html>
