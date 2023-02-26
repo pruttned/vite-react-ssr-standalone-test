@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/server.ts"),
+      entry: path.resolve(__dirname, "src/server.tsx"),
       name: "MyServer",
       formats: ["cjs"],
       fileName: (format) => `server.js`,
