@@ -13,7 +13,7 @@ export default defineConfig({
       fileName: (format) => `server.cjs`,
     },
     rollupOptions: {
-      // external: ["react", "react-dom"],
+      external: ["node:http"],
     },
   },
 });
