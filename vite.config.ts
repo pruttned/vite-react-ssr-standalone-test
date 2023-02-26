@@ -10,7 +10,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, "src/server.ts"),
       name: "MyServer",
       formats: ["cjs"],
-      fileName: (format) => `server.cjs`,
+      fileName: (format) => `server.js`,
     },
     rollupOptions: {
       external: ["node:http"],
