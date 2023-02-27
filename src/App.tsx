@@ -1,4 +1,5 @@
-import { Route } from "react-router";
+import type { Router } from "@remix-run/router";
+import { Route, RouterProvider } from "react-router";
 import { Routes } from "react-router-dom";
 import styled from "styled-components";
 import reactLogo from "./assets/react.svg";
@@ -17,16 +18,13 @@ const Title = styled.h1`
   color: silver;
 `;
 
-function App() {
+function App({ router }: { router: Router }) {
   return (
     <Root>
       <Title>APP</Title>
       <img src={reactLogo} height={64} width={64} alt="logo" />
       <MyComponent />
-      <Routes>
-        <Route element={<Page2 />} path="/page2" />
-        <Route element={<Home />} path="/" />
-      </Routes>
+      <RouterProvider router={router} />
     </Root>
   );
 }
